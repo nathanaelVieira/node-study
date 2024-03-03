@@ -3,16 +3,6 @@ const path = require('path');
 const write = require('./FileWriter');
 const read = require('./FileReader');
 
-
-
-
-
-
-
-
-
-
-
 const pathFile = path.resolve(__dirname, '..', 'test.json');
 
 const people = [
