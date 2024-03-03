@@ -21,7 +21,6 @@ const peopleJSON = JSON.stringify(people, '', 4); // 4 -> valor para identação
 
 readData(pathFile);
 
-
 async function readData(pathFile) {
     try {
         const data = await read(pathFile);
