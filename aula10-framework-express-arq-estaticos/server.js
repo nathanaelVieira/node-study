@@ -7,6 +7,9 @@ app.use(express.urlencoded({
     extended: true
 }));
 
+// Importação para conteudos estaticos.
+app.use(express.static(path.resolve(__dirname, 'public')));
+
 // Um diretório ou uma matriz[] de diretórios para as views do aplicativo
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 
