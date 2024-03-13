@@ -2,12 +2,24 @@ const { request, response } = require("express");
 
 const HomeModel = require('../models/Home');
 
+const Person = require('../models/Person');
+
+
+Person.create({
+    name: 'Nathanael L. Vieira',
+    email: 'UM_DEV_MUITO_PUTO@outlook.com', // Puxando caso de UpperCase 
+    idade: 25
+}).then(response => console.log(response))
+    .catch(err => console.error(err));
+
 HomeModel.create({
     titulo: 'Criando modelo mongodb.js',
     descricao: 'Descrição variante'
 })
     .then(data => console.log(data))
     .catch(err => console.error(err));
+
+
 
 
 exports.mainPage = (request, response) => {
