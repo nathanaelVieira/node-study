@@ -1,5 +1,15 @@
 const { request, response } = require("express");
 
+const HomeModel = require('../models/Home');
+
+HomeModel.create({
+    titulo: 'Criando modelo mongodb.js',
+    descricao: 'Descrição variante'
+})
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+
+
 exports.mainPage = (request, response) => {
 
     /**
